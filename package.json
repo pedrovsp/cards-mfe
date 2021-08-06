@@ -9,6 +9,7 @@
     "@types/react": "^17.0.15",
     "@types/react-dom": "^17.0.9",
     "date-fns": "^2.22.1",
+    "pm2": "^5.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
@@ -22,15 +23,14 @@
   },
   "scripts": {
     "dev": "react-scripts start",
-    "start": "serve -s build",
-    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "heroku-postbuild": "npm run build",
     "lint:fix": "eslint './src/**/*.{ts,tsx}'",
-    "start:micro": "webpack-cli serve",
-    "build:micro": "webpack --mode production",
-    "serve": "serve dist -p 4000",
+    "build:dev": "webpack --config webpack.dev.js",
+    "start:dev": "webpack-cli serve",
+    "build": "webpack --config webpack.prod.js",
+    "start": "pm2-runtime start ecosystem.config.js --env production",
     "clean": "rm -rf dist"
   },
   "devDependencies": {
