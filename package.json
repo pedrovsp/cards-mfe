@@ -1,0 +1,76 @@
+{
+  "name": "mfe-react",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.14.8",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.4.10",
+    "@types/react": "^17.0.15",
+    "@types/react-dom": "^17.0.9",
+    "date-fns": "^2.22.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-is": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3",
+    "react-transition-group": "^4.4.2",
+    "serve": "^12.0.0",
+    "styled-components": "^5.3.0",
+    "typescript": "^4.3.5"
+  },
+  "scripts": {
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build",
+    "lint:fix": "eslint './src/**/*.{ts,tsx}'",
+    "start:micro": "webpack-cli serve",
+    "build:micro": "webpack --mode production",
+    "serve": "serve dist -p 4000",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.13.13",
+    "@babel/preset-typescript": "^7.14.5",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
+    "atriom-plugin": "^1.1.2",
+    "babel-loader": "^8.2.2",
+    "bundle-loader": "^0.5.6",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^6.2.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-import-helpers": "^1.0.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "prettier": "^2.3.2",
+    "svg-url-loader": "^7.1.1",
+    "webpack": "^5.33.2",
+    "webpack-bundle-analyzer": "^4.4.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
